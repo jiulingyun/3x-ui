@@ -106,7 +106,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/MHSanaei/3x-ui/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/dev/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -125,7 +125,7 @@ update() {
         fi
         return 0
     fi
-    bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/tree/dev/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/dev/install.sh)
     if [[ $? == 0 ]]; then
         LOGI "更新完成，面板已自动重启"
         exit 0
@@ -141,7 +141,7 @@ custom_version() {
         exit 1
     fi
 
-    download_link="https://raw.githubusercontent.com/jiulingyun/3x-ui/tree/dev/install.sh"
+    download_link="https://raw.githubusercontent.com/jiulingyun/3x-ui/dev/install.sh"
 
     # Use the entered panel version in the download link
     install_command="bash <(curl -Ls $download_link) v$panel_version"
@@ -175,7 +175,7 @@ uninstall() {
     echo ""
     echo -e "已成功卸载。\n"
     echo "如果需要再次安装此面板，可以使用以下命令:"
-    echo -e "${green}bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/tree/dev/install.sh)${plain}"
+    echo -e "${green}bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/dev/install.sh)${plain}"
     echo ""
     # Trap the SIGTERM signal
     trap delete_script SIGTERM
@@ -425,7 +425,7 @@ enable_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/jiulingyun/3x-ui/tree/dev/x-ui.sh
+    wget -O /usr/bin/x-ui -N --no-check-certificate https://raw.githubusercontent.com/jiulingyun/3x-ui/master/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         LOGE "下载脚本失败，请检查机器是否可以连接Github"

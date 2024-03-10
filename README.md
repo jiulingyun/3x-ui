@@ -4,7 +4,7 @@
 ## 安装 & 更新
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/tree/dev/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/master/install.sh)
 ```
 
 ## 安装指定版本
@@ -12,7 +12,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/tree/dev/inst
 要安装所需的版本，请将该版本添加到安装命令的末尾。例如： `v2.2.1`:
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/tree/dev/install.sh) v2.2.1
+bash <(curl -Ls https://raw.githubusercontent.com/jiulingyun/3x-ui/master/install.sh) v2.2.1
 ```
 
 ## API 路由
